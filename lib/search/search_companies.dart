@@ -11,14 +11,14 @@ class AllWorkersScreen extends StatefulWidget {
 class _AllWorkersScreenState extends State<AllWorkersScreen> {
 
   TextEditingController _searchQueryController = TextEditingController();
-  String searchQuery = "Arama kuyrugu";
+  String searchQuery = "Arama kuyruğu";
 
   Widget _buildSearchField(){
     return TextField(
       controller: _searchQueryController,
       autocorrect: true,
       decoration: InputDecoration(
-        hintText: "Sirket ara...",
+        hintText: "Şirket ara...",
         border: InputBorder.none,
         hintStyle: TextStyle(color: Colors.white30),
       ),
@@ -85,13 +85,13 @@ class _AllWorkersScreenState extends State<AllWorkersScreen> {
               );
             }else{
               return Center(
-                child: Text('Kullanici yok'),
+                child: Text('Kullanıcı yok'),
               );
             }
           }
           return Center(
               child: Text(
-                'Birseyler yanlis gitti',
+                'Bir şeyler yanlış gitti',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
               )
           );

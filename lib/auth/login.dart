@@ -119,14 +119,14 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                           controller: _emailTextController,
                           validator: (value){
                             if(value!.isEmpty || !value.contains("@")){
-                              return "Gecerli e-mail adresi girin";
+                              return "Geçerli e-mail adresi girin";
                             }else{
                               return null;
                             }
                           },
                           style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
-                            hintText: 'Email',
+                            hintText: 'E-Posta',
                             hintStyle: TextStyle(color: Colors.white),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.white),
@@ -146,7 +146,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                           controller: _passTextController,
                           validator: (value){
                             if(value!.isEmpty || value.length < 7){
-                              return "Gecerli sifre girin";
+                              return "Geçerli bir şifre girin";
                             }else{
                               return null;
                             }
@@ -166,7 +166,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                 color: Colors.white,
                               ),
                             ),
-                            hintText: 'Sifre',
+                            hintText: 'Şifre',
                             hintStyle: TextStyle(color: Colors.white),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.white),
@@ -189,7 +189,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                               Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetPasswordScreen()));
                             },
                             child: Text(
-                              'Sifreyi mi unuttun',
+                              'Şifreni mi unuttun ?',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 17,
@@ -214,7 +214,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Giris Yap',
+                                  'Giriş Yap',
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,

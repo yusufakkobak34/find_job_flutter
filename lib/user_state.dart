@@ -13,18 +13,18 @@ class UserState extends StatelessWidget {
       stream: FirebaseAuth.instance.authStateChanges(),
         builder:(ctx, userSnapshot){
           if(userSnapshot.data == null){
-            print('Kullanıcı henüz giris yapmamıs');
+            print('Kullanıcı henüz giriş yapmamış');
             return Login();
           }
           else if(userSnapshot.hasData){
-            print('Kullanıcı giris yapmis durumda');
+            print('Kullanıcı giriş yapmış durumda');
             return JobScreen();
           }
 
           else if(userSnapshot.hasError){
             return Scaffold(
               body: Center(
-                child: Text('Bir hata olustu,lutfen daha sonra deneyin'),
+                child: Text('Bir hata oluştu,sonra tekrar deneyin'),
               ),
             );
           }
@@ -38,7 +38,7 @@ class UserState extends StatelessWidget {
 
           return Scaffold(
             body: Center(
-              child: Text('Birseyler yanlis gitti'),
+              child: Text('Bir şeyler yanlış gitti'),
             ),
           );
 

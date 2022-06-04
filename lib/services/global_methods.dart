@@ -20,7 +20,7 @@ class GlobalMethod {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: const Text(
-                    'Hata olustu ',
+                    'Hata oluştu ',
                   ),
                 ),
               ],
@@ -38,7 +38,7 @@ class GlobalMethod {
                   Navigator.canPop(context) ? Navigator.pop(context) : null;
                 },
                 child: Text(
-                  'OK',
+                  'Tamam',
                   style: TextStyle(color: Colors.red),
                 ),
               ),

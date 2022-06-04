@@ -121,7 +121,7 @@ class _JobWidgetState extends State<JobWidget> {
                             .doc(widget.jobId)
                             .delete();
                         await Fluttertoast.showToast(
-                          msg: "İs silindi",
+                          msg: "İş silindi",
                           toastLength: Toast.LENGTH_LONG,
                           backgroundColor: Colors.grey,
                           fontSize: 18.0,
@@ -129,11 +129,11 @@ class _JobWidgetState extends State<JobWidget> {
                         Navigator.canPop(ctx) ? Navigator.pop(ctx) : null;
                       }
                       else{
-                        GlobalMethod.showErrorDialog(error: "Yetkili degilsiniz", ctx: ctx);
+                        GlobalMethod.showErrorDialog(error: "Yetkili değilsiniz", ctx: ctx);
                       }
                     }
                     catch (error){
-                      GlobalMethod.showErrorDialog(error: 'İs silinemedi', ctx: context);
+                      GlobalMethod.showErrorDialog(error: 'İş silinemedi', ctx: context);
                     } finally{}
                   },
                   child: Row(

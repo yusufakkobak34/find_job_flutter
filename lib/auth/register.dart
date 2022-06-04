@@ -74,7 +74,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin{
     if(isValid){
       if(imageFile == null){
         GlobalMethod.showErrorDialog(
-          error: 'Resim secin', ctx: context
+          error: 'Resim seçin', ctx: context
         );
         return;
       }
@@ -176,14 +176,14 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin{
                           controller: _fullNameController,
                           validator: (value){
                             if(value!.isEmpty){
-                              return "Alan bos bırakılamaz";
+                              return "Alan boş bırakılamaz";
                             }else{
                               return null;
                             }
                           },
                           style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
-                            hintText: 'Tam Adiniz / Sirket Adi',
+                            hintText: 'Tam Adınız / Şirket Adı',
                             hintStyle: TextStyle(color: Colors.white),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.white),
@@ -207,14 +207,14 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin{
                           controller: _emailTextController,
                           validator: (value){
                             if(value!.isEmpty || !value.contains("@")){
-                              return "Gecerli bir e-mail adresi girin";
+                              return "Geçerli bir e-mail adresi girin";
                             }else{
                               return null;
                             }
                           },
                           style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
-                            hintText: 'Email',
+                            hintText: 'E-Posta',
                             hintStyle: TextStyle(color: Colors.white),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.white),
@@ -238,7 +238,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin{
                           controller: _passTextController,
                           validator: (value){
                             if(value!.isEmpty || value.length < 7){
-                              return "Gecerli bir sifre girin";
+                              return "Geçerli bir şifre girin";
                             }else{
                               return null;
                             }
@@ -258,7 +258,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin{
                                 color: Colors.white,
                               ),
                             ),
-                            hintText: 'Sifre',
+                            hintText: 'Şifre',
                             hintStyle: TextStyle(color: Colors.white),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.white),
@@ -282,7 +282,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin{
                           controller: _phoneNumberController,
                           validator: (value){
                             if(value!.isEmpty){
-                              return "Alan bos bırakılamaz";
+                              return "Alan boş bırakılamaz";
                             }else{
                               return null;
                             }
@@ -313,14 +313,14 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin{
                           controller: _locationController,
                           validator: (value){
                             if(value!.isEmpty){
-                              return "Alan bos bırakılamaz";
+                              return "Alan boş bırakılamaz";
                             }else{
                               return null;
                             }
                           },
                           style: TextStyle(color: Colors.white),
                           decoration: InputDecoration(
-                            hintText: 'Sirket Adresi',
+                            hintText: 'Şirket Adresi',
                             hintStyle: TextStyle(color: Colors.white),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.white),
@@ -388,7 +388,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin{
                                     ..onTap = () => Navigator.canPop(context)
                                     ? Navigator.pop(context)
                                     : null,
-                                    text: 'Giris yap',
+                                    text: 'Giriş yap',
                                   style: TextStyle(
                                       color: Colors.blue,
                                       fontWeight: FontWeight.bold,
@@ -416,7 +416,7 @@ class _SignUpState extends State<SignUp> with TickerProviderStateMixin{
         context: context,
         builder: (context){
           return AlertDialog(
-            title: Text('Seciminizi yapin'),
+            title: Text('Seçiminizi yapın'),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [

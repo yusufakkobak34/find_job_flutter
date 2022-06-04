@@ -200,7 +200,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          'Cikis yap',
+                                          'Çıkış Yap',
                                           style: TextStyle(
                                               color: Colors.grey,
                                               fontWeight: FontWeight.bold,
@@ -258,7 +258,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   void _openWhatsAppChat() async {
-    var url = 'https://wa.me/$phoneNumber?text=HelloWorld';
+    var url = 'https://wa.me/$phoneNumber?text=Merhaba';
     launch(url);
   }
 
@@ -277,7 +277,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     if (await canLaunch(url)) {
       await launch(url);
     } else {
-      throw 'Hata olustu';
+      throw 'Hata oluştu';
     }
   }
 

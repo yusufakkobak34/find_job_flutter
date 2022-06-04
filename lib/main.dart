@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             home: Scaffold(
               body: Center(
                 child: Center(
-                  child: Text('Uygulama hazirlaniyor'),
+                  child: Text('Uygulama hazırlanıyor'),
                 ),
               ),
             ),
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
             home: Scaffold(
               body: Center(
                 child: Center(
-                  child: Text('Bir hata olustu'),
+                  child: Text('Bir hata oluştu'),
                 ),
               ),
             ),

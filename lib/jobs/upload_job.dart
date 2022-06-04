@@ -17,10 +17,10 @@ class UploadJobNow extends StatefulWidget {
 
 class _UploadJobNowState extends State<UploadJobNow> {
 
-  TextEditingController _jobCategoryController = TextEditingController(text: 'İs kategorisi secin');
+  TextEditingController _jobCategoryController = TextEditingController(text: 'İş kategorisi seçin');
   TextEditingController _jobTitleController = TextEditingController();
   TextEditingController _jobDescriptionController = TextEditingController();
-  TextEditingController _deadlineDateController = TextEditingController(text: 'İs bitis tarihi');
+  TextEditingController _deadlineDateController = TextEditingController(text: 'İş bitiş tarihi');
 
   final _formKey = GlobalKey<FormState>();
   DateTime? picked;
@@ -44,9 +44,9 @@ class _UploadJobNowState extends State<UploadJobNow> {
     final isValid = _formKey.currentState!.validate();
 
     if(isValid){
-      if(_deadlineDateController.text == 'İs bitis tarihi secin' || _jobCategoryController.text == 'İs kategorisi secin'){
+      if(_deadlineDateController.text == 'İş bitiş tarihi seçin' || _jobCategoryController.text == 'İş kategorisi seçin'){
         GlobalMethod.showErrorDialog(
-          error: 'Secim yapin', ctx: context
+          error: 'Seçim yapın', ctx: context
         );
         return;
       }
@@ -72,7 +72,7 @@ class _UploadJobNowState extends State<UploadJobNow> {
           'applicants': 0,
         });
         await Fluttertoast.showToast(
-            msg: "İs yuklendi",
+            msg: "İş yüklendi",
             toastLength: Toast.LENGTH_LONG,
             backgroundColor: Colors.grey,
             fontSize: 18.0
@@ -80,8 +80,8 @@ class _UploadJobNowState extends State<UploadJobNow> {
         _jobTitleController.clear();
         _jobDescriptionController.clear();
         setState(() {
-          _jobCategoryController.text = 'İs kategorisi secin';
-          _deadlineDateController.text = 'İs bitis tarihi secin';
+          _jobCategoryController.text = 'İş kategorisi seçin';
+          _deadlineDateController.text = 'İs bitiş tarihi seçin';
         });
       }catch (error) {} finally{
         setState(() {
@@ -89,7 +89,7 @@ class _UploadJobNowState extends State<UploadJobNow> {
         });
       }
     }else{
-      print('Gecersiz');
+      print('Geçersiz');
     }
   }
 
@@ -116,7 +116,7 @@ class _UploadJobNowState extends State<UploadJobNow> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Butun alanları doldurunuz',
+                        'Bütün alanları doldurunuz',
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 25,
@@ -138,7 +138,7 @@ class _UploadJobNowState extends State<UploadJobNow> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          _textTitles(label: "İs Kategorisi :"),
+                          _textTitles(label: "İş Kategorisi :"),
                           _textFormFields(
                               valueKey: 'JobCategory',
                               controller: _jobCategoryController,
@@ -148,7 +148,7 @@ class _UploadJobNowState extends State<UploadJobNow> {
                               },
                               maxLength: 100,
                           ),
-                          _textTitles(label: 'İs Basligi :'),
+                          _textTitles(label: 'İş Başlığı :'),
                           _textFormFields(
                               valueKey: 'JobTitle',
                               controller: _jobTitleController,
@@ -156,7 +156,7 @@ class _UploadJobNowState extends State<UploadJobNow> {
                               fct: (){},
                               maxLength: 100,
                           ),
-                          _textTitles(label: 'İs Tanimi :'),
+                          _textTitles(label: 'İş Tanımı :'),
                           _textFormFields(
                             valueKey: 'JobDescription',
                             controller: _jobDescriptionController,
@@ -164,7 +164,7 @@ class _UploadJobNowState extends State<UploadJobNow> {
                             fct: (){},
                             maxLength: 100,
                           ),
-                          _textTitles(label: 'İs bitis tarihi :'),
+                          _textTitles(label: 'İş bitiş tarihi :'),
                           _textFormFields(
                             valueKey: 'Jobdeadline',
                             controller: _deadlineDateController,
@@ -197,7 +197,7 @@ class _UploadJobNowState extends State<UploadJobNow> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Paylas',
+                                  'Paylaş',
                                   style: TextStyle(
                                       color: Colors.grey,
                                       fontWeight: FontWeight.bold,
@@ -242,7 +242,7 @@ class _UploadJobNowState extends State<UploadJobNow> {
           child: TextFormField(
             validator: (value) {
               if (value!.isEmpty) {
-                return "Alan bos bırakılamaz";
+                return "Alan boş bırakılamaz";
               }
               return null;
             },
@@ -280,7 +280,7 @@ class _UploadJobNowState extends State<UploadJobNow> {
         return AlertDialog(
           backgroundColor: Colors.black,
           title: Text(
-            'İs Kategorisi',
+            'İş Kategorisi',
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 20, color: Colors.white),
           ),

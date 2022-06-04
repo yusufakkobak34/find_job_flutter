@@ -78,7 +78,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> with Ticker
                   height: size.height * 0.1,
                 ),
                 Text(
-                  'Sifreyi unuttum',
+                  'Şifremi unuttum',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -89,7 +89,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> with Ticker
                   height: 10,
                 ),
                 Text(
-                  'E-mail Adresi',
+                  'E-Posta Adresi',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,

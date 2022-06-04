@@ -50,7 +50,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> {
     final Uri params = Uri(
       scheme: 'mailto',
       path: emailCompany,
-      query: 'subject=Applying for $jobTitle&body=Hello, please attach Resume CV file',
+      query: 'subject=İş hakkında $jobTitle&body=Merhaba,lütfen CV yükleyiniz',
     );
     final url = params.toString();
     launch(url);
@@ -201,7 +201,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> {
                           ),
                           SizedBox(width: 6,),
                           Text(
-                            'Basvurular',
+                            'Başvurular',
                             style: TextStyle(color: Colors.grey,),
                           ),
                           SizedBox(width: 10,),
@@ -218,7 +218,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> {
                             children: [
                               dividerWidget(),
                               Text(
-                                'İse alim:',
+                                'İşe alım:',
                                 style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.bold),
                               ),
                               SizedBox(
@@ -240,13 +240,13 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> {
                                               .update({'recruitment': true});
                                         }catch(err){
                                           GlobalMethod.showErrorDialog(
-                                              error: 'İslem gerceklestirilemiyor',
+                                              error: 'İşlem gerçekleştirilemiyor',
                                               ctx: context
                                           );
                                         }
                                       }else{
                                         GlobalMethod.showErrorDialog(
-                                            error: 'İslemi yapmaya yetkili degilsiniz',
+                                            error: 'İşlemi yapmaya yetkili değilsiniz',
                                             ctx: context
                                         );
                                       }
@@ -284,13 +284,13 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> {
                                               .update({'recruitment': false});
                                         }catch(err){
                                           GlobalMethod.showErrorDialog(
-                                              error: 'İslem gerceklestirilemiyor',
+                                              error: 'İşlem gerçekleştirilemiyor',
                                               ctx: context
                                           );
                                         }
                                       }else{
                                         GlobalMethod.showErrorDialog(
-                                            error: 'İslem icin yetkili degilsiniz',
+                                            error: 'İşlem için yetkili değilsiniz',
                                             ctx: context
                                         );
                                       }
@@ -320,7 +320,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> {
 
                       dividerWidget(),
                       Text(
-                        'İs Tanimi:',
+                        'İş Tanımı:',
                         style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                       SizedBox(
@@ -412,7 +412,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Bitis tarihi:',
+                            'Bitiş tarihi:',
                             style: TextStyle(color: Colors.white),
                           ),
                           Text(
@@ -522,7 +522,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> {
                                                 borderRadius: BorderRadius.circular(8)
                                             ),
                                             child: Text(
-                                              'Paylas',
+                                              'Paylaş',
                                               style: TextStyle(
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.bold,
@@ -589,7 +589,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> {
                                   return Center(child: CircularProgressIndicator());
                                 }else{
                                   if (snapshot.data == null) {
-                                    Center(child: Text('Bu is icin yorum yok'));
+                                    Center(child: Text('Bu iş için yorum yok'));
                                   }
                                 }
                                 return ListView.separated(

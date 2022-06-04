@@ -97,7 +97,7 @@ class _AllWorkersWidgetState extends State<AllWorkersWidget> {
       await launch(mailUrl);
     }else{
       print('Hata');
-      throw 'Hata olustu';
+      throw 'Hata oluştu';
     }
   }
 

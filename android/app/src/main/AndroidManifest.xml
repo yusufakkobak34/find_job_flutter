@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.project.linkedin_clone">
    <application
-        android:label="linkedin_clone"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Job Finder"
+        android:icon="@mipmap/launcher_icon">
        <activity
            android:name="com.yalantis.ucrop.UCropActivity"
            android:screenOrientation="portrait"

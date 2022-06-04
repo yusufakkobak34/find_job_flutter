@@ -33,14 +33,14 @@ class BottomNavigationBarForApp extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: const Text(
-                    'Cikis yap',
+                    'Çıkış yap',
                     style: TextStyle(color: Colors.grey, fontSize: 28),
                   ),
                 ),
               ],
             ),
             content: Text(
-              'Cikis yapmak istediginize emin misiniz ?',
+              'Çıkış yapmak istediğinize emin misiniz ? ',
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 20,

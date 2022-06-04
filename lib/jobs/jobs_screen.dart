@@ -87,13 +87,13 @@ class _JobScreenState extends State<JobScreen> {
               );
             }else{
               return Center(
-                child: Text('İs yok'),
+                child: Text('İş yok'),
               );
             }
           }
           return Center(
             child: Text(
-              'Birseyler yanlis gitti',
+              'Bir şeyler yanlış gitti',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
             )
           );
@@ -109,7 +109,7 @@ class _JobScreenState extends State<JobScreen> {
         return AlertDialog(
           backgroundColor: Colors.black,
           title: Text(
-            'İs kategorisi',
+            'İş kategorisi',
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 20, color: Colors.white),
           ),

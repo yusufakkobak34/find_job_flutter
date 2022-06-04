@@ -18,7 +18,7 @@ class _SearchScreenState extends State<SearchScreen> {
       controller: _searchQueryController,
       autocorrect: true,
       decoration: InputDecoration(
-        hintText: "İs ara...",
+        hintText: "İş ara...",
         border: InputBorder.none,
         hintStyle: TextStyle(color: Colors.white30),
       ),
@@ -98,13 +98,13 @@ class _SearchScreenState extends State<SearchScreen> {
               );
             }else{
               return Center(
-                child: Text('İs yok'),
+                child: Text('İş yok'),
               );
             }
           }
           return Center(
               child: Text(
-                'Birseyler yanlis gitti',
+                'Bir şeyler yanlış gitti',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
               )
           );
